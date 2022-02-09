@@ -26,6 +26,7 @@ const task6_1 = require("./tasks/task6");
 const task7_1 = require("./tasks/task7");
 const task9_1 = require("./tasks/task9");
 const task10_1 = require("./tasks/task10");
+const task11_1 = require("./tasks/task11");
 require("dotenv/config");
 const EVENTS_ABI_1 = require("./EVENTS_ABI");
 const Key1 = process.env.prvtKey1;
@@ -172,4 +173,9 @@ const task10 = () => __awaiter(void 0, void 0, void 0, function* () {
     const EventsContractAddress = '0x110073E52cF4c3bea54De375cA94e66FBd54D7C8';
     yield (0, task10_1.GetDeployerAddress)(EventsContractAddress, EVENTS_ABI_1.EVENTS_ABI);
 });
-task10();
+// task10()
+const task11 = () => __awaiter(void 0, void 0, void 0, function* () {
+    const tokenAddress = "0x521855AA99a80Cb467A12b1881f05CF9440c7023"; // phnx
+    yield (0, task11_1.NumberOfTokenHolders)(tokenAddress);
+});
+task11();

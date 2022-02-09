@@ -45,12 +45,6 @@ const GetDeployerAddress = (ContractAddress, ABI) => __awaiter(void 0, void 0, v
     // let earltTx = await web3.eth.getTransactionFromBlock('10047122', 0)
     // console.log('earltTx ==>> ', earltTx);
     let resp = yield web3.eth.getTransactionReceipt(TxList.data.result[0].hash);
-    //  let resp = await Contract.getPastEvents('All', {
-    //      fromBlock:"earliest",
-    //      toBlock: 'latest'
-    // })
-    // let blockNum = await web3.eth.getBlockNumber()
-    //     console.log('BlockNumber', blockNum);
     console.log('Contract Owner =>> ', resp.from);
     //    web3.eth.getTransaction()
 });
