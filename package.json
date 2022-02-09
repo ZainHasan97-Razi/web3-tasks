@@ -1,0 +1,23 @@
+{
+  "name": "tasks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.3",
+    "axios": "^0.25.0",
+    "dotenv": "^15.0.0",
+    "ethereumjs-tx": "^2.1.2",
+    "web3": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "@types/web3": "^1.2.2"
+  },
+  "description": ""
+}
