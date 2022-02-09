@@ -60,7 +60,7 @@ const SendTxAtLowGas = (fromAccount, toAccount) => __awaiter(void 0, void 0, voi
     };
     // let resp = await TokenContract?.methods.mint(fromAccount, '1000').send({from: toAccount, to: tokenAddress, gas: 50000})
     // console.log('Mint response => ', resp);
-    let res = yield (TokenContract === null || TokenContract === void 0 ? void 0 : TokenContract.methods.transfer(toAccount, transferAmount).send(txObject));
+    let res = TokenContract === null || TokenContract === void 0 ? void 0 : TokenContract.methods.transfer(toAccount, transferAmount).send(txObject);
     console.log('TransferMethodPhnx Response => ', res);
     yield CancelTransaction(fromAccount, Nonce);
 });

@@ -11,6 +11,7 @@ import { GetTxDetails } from './tasks/task5';
 import { GetTransferTxDetails } from './tasks/task6';
 import { SendTxAtLowGas } from './tasks/task7';
 import { GetListOfAllTokenTransfers } from './tasks/task9';
+import { GetDeployerAddress } from './tasks/task10'
 import 'dotenv/config'
 import { EVENTS_ABI } from './EVENTS_ABI';
 
@@ -195,4 +196,10 @@ const task7 = async () => {
 const task9 = async () => {
     await GetListOfAllTokenTransfers()
 }
-task9()
+// task9()
+
+const task10 = async () => {
+    const EventsContractAddress = '0x110073E52cF4c3bea54De375cA94e66FBd54D7C8';
+    await GetDeployerAddress(EventsContractAddress, EVENTS_ABI)
+}
+task10()

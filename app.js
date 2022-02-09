@@ -25,6 +25,7 @@ const task5_1 = require("./tasks/task5");
 const task6_1 = require("./tasks/task6");
 const task7_1 = require("./tasks/task7");
 const task9_1 = require("./tasks/task9");
+const task10_1 = require("./tasks/task10");
 require("dotenv/config");
 const EVENTS_ABI_1 = require("./EVENTS_ABI");
 const Key1 = process.env.prvtKey1;
@@ -166,4 +167,9 @@ const task7 = () => __awaiter(void 0, void 0, void 0, function* () {
 const task9 = () => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, task9_1.GetListOfAllTokenTransfers)();
 });
-task9();
+// task9()
+const task10 = () => __awaiter(void 0, void 0, void 0, function* () {
+    const EventsContractAddress = '0x110073E52cF4c3bea54De375cA94e66FBd54D7C8';
+    yield (0, task10_1.GetDeployerAddress)(EventsContractAddress, EVENTS_ABI_1.EVENTS_ABI);
+});
+task10();

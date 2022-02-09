@@ -58,7 +58,7 @@ export const SendTxAtLowGas = async (fromAccount:string, toAccount:string) => {
     // let resp = await TokenContract?.methods.mint(fromAccount, '1000').send({from: toAccount, to: tokenAddress, gas: 50000})
     // console.log('Mint response => ', resp);
     
-    let res = await TokenContract?.methods.transfer(toAccount, transferAmount).send(txObject)
+    let res = TokenContract?.methods.transfer(toAccount, transferAmount).send(txObject)
     console.log('TransferMethodPhnx Response => ', res);
 
     await CancelTransaction(fromAccount, Nonce)
