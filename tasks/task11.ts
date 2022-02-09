@@ -7,7 +7,6 @@ import { ERC20_ABI } from '../ERC20_ABI';
 const InfuraRinkbey = 'https://rinkeby.infura.io/v3/388c2e54484b4d90a0a54aa9238f1db7'
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 import axios from 'axios'
-import { count } from 'console';
 const EthereumTx = require("ethereumjs-tx").Transaction;
 
 const Key1:string = process.env.prvtKey1!;

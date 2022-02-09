@@ -24,6 +24,7 @@ const task4_1 = require("./tasks/task4");
 const task5_1 = require("./tasks/task5");
 const task6_1 = require("./tasks/task6");
 const task7_1 = require("./tasks/task7");
+const task8_1 = require("./tasks/task8");
 const task9_1 = require("./tasks/task9");
 const task10_1 = require("./tasks/task10");
 const task11_1 = require("./tasks/task11");
@@ -165,6 +166,10 @@ const task7 = () => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, task7_1.SendTxAtLowGas)(account1.address, account2.address);
 });
 // task7()
+const task8 = () => __awaiter(void 0, void 0, void 0, function* () {
+    yield (0, task8_1.AllTransactionsByAddress)(account1.address);
+});
+task8();
 const task9 = () => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, task9_1.GetListOfAllTokenTransfers)();
 });
@@ -178,4 +183,4 @@ const task11 = () => __awaiter(void 0, void 0, void 0, function* () {
     const tokenAddress = "0x521855AA99a80Cb467A12b1881f05CF9440c7023"; // phnx
     yield (0, task11_1.NumberOfTokenHolders)(tokenAddress);
 });
-task11();
+// task11()

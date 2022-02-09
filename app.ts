@@ -10,6 +10,7 @@ import { SubscribeEvent } from './tasks/task4';
 import { GetTxDetails } from './tasks/task5';
 import { GetTransferTxDetails } from './tasks/task6';
 import { SendTxAtLowGas } from './tasks/task7';
+import { AllTransactionsByAddress } from './tasks/task8';
 import { GetListOfAllTokenTransfers } from './tasks/task9';
 import { GetDeployerAddress } from './tasks/task10'
 import { NumberOfTokenHolders } from './tasks/task11'
@@ -194,6 +195,11 @@ const task7 = async () => {
 }
 // task7()
 
+const task8 = async () => {
+    await AllTransactionsByAddress(account1.address)
+}
+task8()
+
 const task9 = async () => {
     await GetListOfAllTokenTransfers()
 }
@@ -209,4 +215,4 @@ const task11 = async () => {
     const tokenAddress = "0x521855AA99a80Cb467A12b1881f05CF9440c7023" // phnx
     await NumberOfTokenHolders(tokenAddress)
 }
-task11()
+// task11()
