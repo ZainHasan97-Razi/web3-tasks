@@ -30,11 +30,12 @@ const initContract:Function = async () => {
 export const GetListOfAllTokenTransfers = async () => {
     let Contract = await initContract()
      let resp = await Contract.getPastEvents('Transfer', {
-         fromBlock:10108767,
+        //  fromBlock:10108767,
+        fromBlock:9227840,
          toBlock: 'latest'
     })
     // .on('data', function(event:any) {
     //     console.log('Events of transfer =>>>> ', event); // same results as the optional callback above
     // })
-    console.log('resppppppppppppppppppp', resp);
+    console.log('resppppppppppppppppppp', resp.length);
 }

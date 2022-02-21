@@ -37,12 +37,13 @@ const initContract = () => __awaiter(void 0, void 0, void 0, function* () {
 const GetListOfAllTokenTransfers = () => __awaiter(void 0, void 0, void 0, function* () {
     let Contract = yield initContract();
     let resp = yield Contract.getPastEvents('Transfer', {
-        fromBlock: 10108767,
+        //  fromBlock:10108767,
+        fromBlock: 9227840,
         toBlock: 'latest'
     });
     // .on('data', function(event:any) {
     //     console.log('Events of transfer =>>>> ', event); // same results as the optional callback above
     // })
-    console.log('resppppppppppppppppppp', resp);
+    console.log('resppppppppppppppppppp', resp.length);
 });
 exports.GetListOfAllTokenTransfers = GetListOfAllTokenTransfers;

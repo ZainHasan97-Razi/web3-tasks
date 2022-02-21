@@ -79,6 +79,7 @@ export const TransferMethodPhnx = async (fromAccount:string, toAccount:string) =
 }
 
 // Transfer From
+// in .send() method we don't provide owner address at from: key but instead we provide address which is allowed to spend that token of some owner
 export const TransferFromMethodPhnx:Function = async (fromAccount:string, toAccount:string) => {
   const transferAmount = "1";
   CheckPhnxBalanceWithBalanceOf('Balancee of acc1 fromAccount', fromAccount)

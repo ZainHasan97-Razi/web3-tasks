@@ -169,7 +169,7 @@ const task7 = () => __awaiter(void 0, void 0, void 0, function* () {
 const task8 = () => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, task8_1.AllTransactionsByAddress)(account1.address);
 });
-task8();
+// task8()
 const task9 = () => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, task9_1.GetListOfAllTokenTransfers)();
 });
@@ -183,4 +183,4 @@ const task11 = () => __awaiter(void 0, void 0, void 0, function* () {
     const tokenAddress = "0x521855AA99a80Cb467A12b1881f05CF9440c7023"; // phnx
     yield (0, task11_1.NumberOfTokenHolders)(tokenAddress);
 });
-// task11()
+task11();
